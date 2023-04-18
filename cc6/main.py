@@ -1,7 +1,7 @@
-from linked_list import linked_list
+from linked_list import LinkedList
 
 if __name__=="__main__":
-    LL= linked_list()
+    LL= LinkedList()
 
     LL.append("a")
     LL.append("b")

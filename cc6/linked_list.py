@@ -1,6 +1,6 @@
 from node import Node
 
-class linked_list:
+class LinkedList:
     def __init__(self):
         self.head = None
     
@@ -33,9 +33,9 @@ class linked_list:
                 if current.next.value == value:
                     new_node.next = current.next
                     current.next = new_node
-                
+                    return
                 current = current.next
-                return
+                
             current.next = new_node       # If the value is not found in the list --> append the new node at the  end of list 
 
 
