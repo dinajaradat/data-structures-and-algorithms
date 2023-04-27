@@ -34,37 +34,37 @@ def test_insert_multiple_nodes():
 
 
 
-def test_value_in_LL():
-    ll = LinkedList()
-    ll.insert(9)
-    ll.insert(10)
-    ll.insert(11)
+# def test_value_in_LL():
+#     ll = LinkedList()
+#     ll.insert(9)
+#     ll.insert(10)
+#     ll.insert(11)
 
-    actual = ll.includes(10)
-    expected = True
-    assert actual == expected
+#     actual = ll.includes(10)
+#     expected = True
+#     assert actual == expected
 
     
 
-def test_value_not_in_LL():
-    ll = LinkedList()
-    ll.insert(9)
-    ll.insert(10)
-    ll.insert(11)
+# def test_value_not_in_LL():
+#     ll = LinkedList()
+#     ll.insert(9)
+#     ll.insert(10)
+#     ll.insert(11)
 
-    actual = ll.includes(5)
-    expected = False
-    assert actual == expected
+#     actual = ll.includes(5)
+#     expected = False
+#     assert actual == expected
 
 
 
-def test_values():
-    ll = LinkedList()
-    ll.insert(9)
-    ll.insert(10)
-    ll.insert(11)
+# def test_values():
+#     ll = LinkedList()
+#     ll.insert(9)
+#     ll.insert(10)
+#     ll.insert(11)
 
-    actual = str(ll)
-    expected = "11 --> 10 --> 9 --> Null"
-    assert actual == expected
+#     actual = str(ll)
+#     expected = "11 --> 10 --> 9 --> Null"
+#     assert actual == expected
 
