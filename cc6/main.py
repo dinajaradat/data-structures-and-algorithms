@@ -1,4 +1,4 @@
-from linked_list import LinkedList
+from cc6.linked_list import LinkedList
 
 if __name__=="__main__":
     LL= LinkedList()
