@@ -16,6 +16,7 @@ class stack:
             current = self.top
             self.top = node
             self.top.next = current
+            return  self.top
 
     def pop(self):
     
@@ -27,6 +28,7 @@ class stack:
             current = self.top
             self.top = self.top.next
             current.next = None
+            return current
 
     def peek(self):
         if self.is_empty():

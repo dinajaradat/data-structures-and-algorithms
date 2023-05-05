@@ -4,6 +4,7 @@ class Queue :
 
     def __init__(self):
         self.front = None
+        self.rear = None
     
     def enqueue(self,value):
         node = Node(value)    # Create a new node
@@ -16,7 +17,7 @@ class Queue :
         else:
             current = self.rear
             self.rear = node
-            self.rear.next = current
+            current.next = self.rear 
 
     def dequeue(self):
     
