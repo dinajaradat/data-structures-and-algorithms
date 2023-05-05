@@ -1,5 +1,6 @@
 class Node:
     def __init__(self,value):
+        
         """
         Initializes a new Node object with the given value.
 
