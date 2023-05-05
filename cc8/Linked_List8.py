@@ -1,14 +1,31 @@
 class Node:
     def __init__(self,value):
+        
+        """
+        Initializes a new Node object with the given value.
+
+        Args:
+            value: The value to be stored in the node.
+        """
         self.value = value
         self.next = None
 
 
 class LinkedList:
     def __init__(self):
+        """
+        Initializes an empty linked list.
+        """
         self.head = None
     
     def append(self,value):
+
+        """
+        Appends a new node with the given value to the end of the linked list.
+
+        Args:
+            value: The value to be stored in the new node.
+        """
         node = Node(value)    # Create a new node
        
 
@@ -23,6 +40,12 @@ class LinkedList:
             return 
     
     def __str__(self):
+        """
+        Returns a string representation of the linked list.
+
+        Returns:
+            A string representing the linked list, with the node values separated by "-->" and ending with "X".
+        """
         output = "" 
 
         if self.head is None:
@@ -40,6 +63,17 @@ class LinkedList:
         
 
     def zip_List(self,list1,list2):
+         """
+        Zips together two linked lists and returns a new linked list.
+
+        Args:
+            list1: The first linked list to be zipped.
+            list2: The second linked list to be zipped.
+
+        Returns:
+            A new linked list containing the nodes from list1 and list2, alternately.
+
+        """
 
 
          pointer1 = list1.head
