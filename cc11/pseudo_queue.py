@@ -104,9 +104,9 @@ class Pseudo_queue:
             current = self.top
             
             while (current):
-                output =  output + f'{current.value} --> '
+                output =  output + f'<-- {current.value}  '
                 current = current.next
-            output += "None"
+            output = "None" + output
 
         return output
     
