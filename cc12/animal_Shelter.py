@@ -1,4 +1,4 @@
-from node import Node
+from cc12.node import Node
 class animal:
 
     def __init__(self,species ,name ):
@@ -63,7 +63,15 @@ class AnimalShelter:
                     temp.next = current.next
                     current.next = None
                     # print(current.value)
-                    return current
+                    return current.value
+    def is_empty(self):
+        """
+        Returns True if the queue is empty, False otherwise.
+        """
+        if self.front is None:   # Check if the queue is empty
+            
+            return True
+        return False
        
     def __str__(self):
         """
