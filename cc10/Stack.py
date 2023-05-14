@@ -1,6 +1,6 @@
 
 # from cc10.node import Node
-from node import Node
+from cc10.node import Node
 
 class Stack:
 
