@@ -56,11 +56,8 @@ class Stack:
             Returns:
                 True if each open bracket has a close bracket.
             """
-             
-            items = list(string)
-            # print(items)
 
-            for i in items:
+            for i in string:
                 # print(i, end="")
                 if i == "(" or i == "[" or i == "{":
                     self.push(i)
