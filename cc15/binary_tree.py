@@ -201,5 +201,8 @@ if __name__ == "__main__":
     # print(B)
 
     print(B.Contains(9))
+    print(B.pre_order(B.root))
+    print(B.In_order(B.root))
+    print(B.post_order(B.root))
 
 
