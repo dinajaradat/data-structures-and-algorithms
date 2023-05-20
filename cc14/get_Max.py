@@ -10,9 +10,13 @@ class Max_Stack:
 
         if self.top == None:
             self.top = node
+            self.maxStack.top = node
         else:
+            if node > self.maxStack.top.value:
+                self.maxStack.top = node
             node.next = self.top
             self.top = node
+            
 
         return self.top.value
     
@@ -21,6 +25,8 @@ class Max_Stack:
             raise Exception ("Empty Stack")
         else:
             temp = self.top
+            if self.maxStack.top.value == self.top.value:
+                self.maxStack.top = None
             self.top = self.top.next
             temp.next = None
 
