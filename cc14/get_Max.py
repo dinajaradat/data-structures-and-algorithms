@@ -1,19 +1,21 @@
 from node import Node
-from stack import Stack
+
 class Max_Stack:
     def __init__(self):
         self.top = None
-        self.maxStack = Stack()
+        self.max = 0
 
     def push(self,value):
+
+        if value > self.max :
+                self.max = value
+
         node = Node(value)
 
         if self.top == None:
             self.top = node
-            self.maxStack.top = node
+            
         else:
-            if node > self.maxStack.top.value:
-                self.maxStack.top = node
             node.next = self.top
             self.top = node
             
@@ -21,61 +23,45 @@ class Max_Stack:
         return self.top.value
     
     def pop(self):
+       
         if self.top == None:
             raise Exception ("Empty Stack")
         else:
             temp = self.top
-            if self.maxStack.top.value == self.top.value:
-                self.maxStack.top = None
             self.top = self.top.next
             temp.next = None
-
+            if temp.value == self.max:
+               self.max = 0 
+               current = self.top
+               while current.next is not None:
+                    if current.value > self.max:
+                       self.max = current.value
+                    current = current.next
+                   
         return temp.value
-    
 
     
-    def getMax(self,value):
+    def getMax(self):
+        return self.max
+
+
         
-        if self.top == None:
-            self.push(value)
-            self.maxStack.push(value)
-            # print(self.maxStack.top.value)
-        else:
-            if value >= self.maxStack.top.value:
-                self.push(value)
-                self.maxStack.pop()
-                self.maxStack.push(value)
-                # print(self.maxStack.top.value)
-            else:
-                self.push(value)
-                # print(self.maxStack.top.value)
-            
-        # print(self.maxStack.top.value)
-
-
-            
-
-       
 
     
 
 if __name__ == "__main__":
-    stack1 = Max_Stack()
-    stack1.getMax(5)
-    stack1.getMax(4)
-    stack1.getMax(9)
-    stack1.getMax(3)
-    stack1.getMax(7)
-    print(stack1.maxStack.top.value)
+    S = Max_Stack()
+
+    S.push(3)
+    S.push(2)
+    S.push(3)
+    S.push(4)
+    S.push(9)
+
+    print(S.getMax())
+
+    print(S.pop())
+
+    print(S.getMax())
 
 
-
-#  Max_Stack.push(self.top.value)
-#         current = self.top
-#         while current is not None:
-#             current = current.next
-#             if current.value >= Max_Stack.top.value:
-#                 Max_Stack.pop()
-#                 Max_Stack.push(current.value)
-            
-#         return Max_Stack.top.value

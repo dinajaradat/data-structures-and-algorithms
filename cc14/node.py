@@ -7,5 +7,4 @@ class Node:
             value: The value to be stored in the node.
         """
         self.value = value
-        self.left = None
-        self.right = None
+        self.next = None
