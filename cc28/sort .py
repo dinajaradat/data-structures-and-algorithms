@@ -1,5 +1,5 @@
 import re
-def insert_by_most_recent (sorted , value):
+def Insert_by_most_recent (sorted , value):
     i = 0
     while value['year'] > sorted[i]['year']:
         i+=1
@@ -12,14 +12,14 @@ def insert_by_most_recent (sorted , value):
     sorted.append(value)
     
 
-def by_most_recent(array):
+def By_most_recent(array):
     sorted = []
     sorted.append(array[0])
     len_array = len(array)
     # print(sorted)
 
     for i in range (1, len_array):
-        insert_by_most_recent(sorted , array[i])
+        Insert_by_most_recent(sorted , array[i])
         # print(sorted)
         
     return sorted
@@ -42,7 +42,7 @@ def insert_alphabetical (sorted , value):
         sorted.append(value)
     
 
-def alphabetical(array):
+def Alphabetical(array):
     sorted = []
     sorted.append(array[0])
     len_array = len(array)
@@ -56,8 +56,8 @@ def alphabetical(array):
 
 if __name__ == "__main__":
     array = [{"title":"C" , "year" : 5 , "genres" :["action"]} , {"title":"An B" , "year" : 2 , "genres" :["action"]} , {"title":"TA" , "year" : 1 , "genres" :["action"]}]
-    # print(by_most_recent(array))
-    print(alphabetical(array))
+    print(By_most_recent(array))
+    print(Alphabetical(array))
 
 
 
