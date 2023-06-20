@@ -13,9 +13,11 @@ def Insert_by_most_recent (sorted , value):
     
 
 def By_most_recent(array):
+    len_array = len(array)
+    if len_array == 0:
+        return []
     sorted = []
     sorted.append(array[0])
-    len_array = len(array)
     # print(sorted)
 
     for i in range (1, len_array):
@@ -46,6 +48,8 @@ def Alphabetical(array):
     sorted = []
     sorted.append(array[0])
     len_array = len(array)
+    if len_array == 0:
+        return []
     # print(sorted)
 
     for i in range (1, len_array):
