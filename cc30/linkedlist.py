@@ -26,3 +26,4 @@ class LinkedList:
             values.append(current.data)
             current = current.next
         return f'{values}'
+    

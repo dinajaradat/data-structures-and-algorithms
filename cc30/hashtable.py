@@ -1,4 +1,4 @@
-from linkedlist import LinkedList
+from cc30.linkedlist import LinkedList
 
 class HashTable():
     def __init__(self,size=4):
@@ -60,11 +60,19 @@ class HashTable():
 
     def keys(self):
         array = []
+
+        if self.map is None:
+          return []
+        
         for bucket in self.map:
-            if isinstance(bucket, LinkedList):
-                for i in bucket:
-                    array.append(i[0])
-            elif bucket:
-                array.append(bucket[0])
+            if bucket is not None:
+                if isinstance(bucket, LinkedList):
+                    current = bucket.head
+                    while current:
+                        array.append(current.data[0])
+                        current = current.next
+                else:
+                    key = bucket[0]
+                    array.append(key)
         return array
         
