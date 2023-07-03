@@ -20,4 +20,5 @@
 | CC#26 | [CC#26](./cc26/README.md) |
 | CC#27 | [CC#27](./cc27/README.md) |
 | CC#30 | [CC#30](./cc30/README.md) |
+| CC#31 | [CC#31](./cc31/README.md) |
 
