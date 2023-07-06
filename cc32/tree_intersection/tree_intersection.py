@@ -11,7 +11,7 @@ def tree_intersection(tree1, tree2):
 
     def traverse(node, set):
         if node is None:
-            return
+            return None
         set.add(node.value)
         traverse(node.left, set)
         traverse(node.right, set)
