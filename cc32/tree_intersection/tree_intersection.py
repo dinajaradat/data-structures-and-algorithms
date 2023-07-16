@@ -6,29 +6,36 @@ class Node:
 
 
 def tree_intersection(tree1, tree2):
-    set1 = set()
-    set2 = set()
+    hashmap = {}
+    intersection_set = set()
 
-    def traverse(node, set):
+    def traverse(node):
         if node is None:
             return None
-        set.add(node.value)
-        traverse(node.left, set)
-        traverse(node.right, set)
+        hashmap[node.value] = True
+        traverse(node.left)
+        traverse(node.right)
 
-    traverse(tree1.root, set1)
-    traverse(tree2.root, set2)
+    traverse(tree1.root)
 
-    # print(set1)
-    # print(set2)
+    def find_intersection(node):
+        if node is None:
+            return None
+        if node.value in hashmap:
+            intersection_set.add(node.value)
+        find_intersection(node.left)
+        find_intersection(node.right)
 
-    return set1.intersection(set2)
+    find_intersection(tree2.root)
+    
+    return intersection_set
 
 
 
 class BinaryTree:
     def __init__(self):
         self.root = None
+
         
 
 

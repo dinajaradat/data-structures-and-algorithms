@@ -4,21 +4,25 @@
 # Whiteboard Process
 
 ![img](./cc_32.png)
+![tests](../tests/test_cc32.py)
 
 
 # Approach & Efficiency
-### create two empty sets, set1 and set2, to store values
-### Define a  function called traverse that takes a node and a set as input.
-    - If the node is None, return None.
-### Add the value of the node to the set.
-### Recursively call traverse on the left child of the node, passing the same set.
-### Recursively call traverse on the right child of the node, passing the same set.
-### call the traverse function on the root of tree1, passing set1.
-### call the traverse function on the root of tree2, passing set2.
-### Return the intersection of set1 and set2.
+### Initialize an empty hashmap and an empty set.
+### Create a recursive function traverse to traverse the nodes of tree1 and populate the hashmap with the values encountered.
+    If the current node is None, return None.
+    else, add the current node's value as a key to the hashmap with a value of True.
+    Recursively call traverse for the left and right child nodes.
+### traverse(tree1.root) to populate the hashmap with values from tree1.
+### Define another recursive function find_intersection(node) to traverse the nodes of tree2 and find the intersection of values.
+    If the current node is None, return None.
+   If the current node's value exists in the hashmap, add it to the intersection set.
+   Recursively call find_intersection for the left and right child nodes.
+### find_intersection(tree2.root) to find the intersection of values in tree2 using the hashmap.
+### Return the intersection_set.
 
-## time --> O(N)
-## Space --> O(N) 
+## time --> O(n + m), where n is the number of nodes in tree1 and m is the number of nodes in tree2
+## Space -->  O(n + m)
 
 
 
