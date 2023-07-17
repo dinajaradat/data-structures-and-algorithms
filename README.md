@@ -24,4 +24,5 @@
 | CC#32 | [CC#32](./cc32/README.md) |
 | CC#33 | [CC#33](./cc33/README.md) |
 | CC#35 | [CC#35](./cc35/README.md) |
+| CC#36 | [CC#36](./cc36/README.md) |
 

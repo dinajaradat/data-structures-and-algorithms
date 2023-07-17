@@ -71,7 +71,7 @@ def test_6():
     actual = graph1.get_neighbors(c)
     assert expected == actual 
 
-def test_6():
+def test_7():
     graph1 = Graph()
 
     a = graph1.add_vertex("A")
