@@ -84,5 +84,5 @@ graph1.add_edge(c,e,37)
 graph1.add_edge(e,f,250)
 
 # print(graph1)
-print(graph1.business_trip(["Metroville", "Pandora"]))
+print(graph1.business_trip(["Metroville", "Pandora","Arendelle"]))
 
